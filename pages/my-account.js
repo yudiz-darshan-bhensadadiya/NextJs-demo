@@ -1,15 +1,13 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import Link from 'next/link';
 import Image from 'next/image'
 import { useRouter } from 'next/router';
-import axios from 'axios'
-import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
-import NavScrollExample from './Components/Navbar';
+import NavScrollExample from './Components/Navbar/Navbar';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Row } from 'react-bootstrap';
+import Layout from '../Components/Layout';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,13 +22,14 @@ export default function Account ({ data }) {
             router.push('/')
         }
     },[data, myDetails, router])
+
     const myLoader = ({ src }) => {
         return `${myDetails.avatar_url}`;
     }
 
     return (
+        <Layout>
         <>
-         <NavScrollExample UName={myDetails?.login}/>
             <Head>
              <title>{myDetails?.name}</title>
             </Head>
@@ -63,6 +62,7 @@ export default function Account ({ data }) {
                     
             </div>
         </>
+        </Layout>
     )
 }
 
