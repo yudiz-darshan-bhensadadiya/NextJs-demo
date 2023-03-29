@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import NavScrollExample from './Components/Navbar/Navbar';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Row } from 'react-bootstrap';

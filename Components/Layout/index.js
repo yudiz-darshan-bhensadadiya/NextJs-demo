@@ -1,5 +1,5 @@
 import React from "react";
-import NavScrollExample from '../Navbar/Navbar';
+import NavScrollExample from "../Navbar/Navbar";
 
 export default function Layout({children}){
     return(

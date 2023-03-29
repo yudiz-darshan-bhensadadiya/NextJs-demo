@@ -2,10 +2,8 @@ import Layout from "../../Components/Layout";
 
 export async function getStaticPaths(context) {
 
-  const { params } = context;
-    const id = params;
-    console.log('id', id)
-    
+            console.log('id', context)
+
             const response = await fetch(`${process.env.baseURL}users/darshan1210/repos`, { method: 'GET' });
             const repodataData = await response.json(); 
             const paths=repodataData.map(({name}) => { return { params: { name }}})
